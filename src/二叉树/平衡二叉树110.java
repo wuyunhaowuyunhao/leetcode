@@ -11,6 +11,7 @@ public class 平衡二叉树110 {
         return getHeight(root) != -1;
     }
 
+    // -1 表示已经不是平衡二叉树了，否则返回值是以该节点为根节点树的高度
     int getHeight(TreeNode root){
         if (root == null){
             return 0;
