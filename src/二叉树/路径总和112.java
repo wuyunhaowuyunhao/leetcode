@@ -6,33 +6,6 @@ import java.util.Collections;
 import java.util.List;
 
 public class 路径总和112 {
-    /* 寻找所有路径
-    public List<List<TreeNode>> binaryTreePaths(TreeNode root) {
-        List<List<TreeNode>> res = new ArrayList<>();
-        if (root == null){
-            return res;
-        }
-        List<TreeNode> path = new ArrayList<>();
-        path.add(root);
-        travel(root, res, path);
-        return res;
-    }
-
-    private void travel(TreeNode root, List<List<TreeNode>> res, List<TreeNode> path){
-        if (root.left==null&&root.right==null){
-            res.add(path);
-        }
-        if (root.left!=null){
-            path.add(root.left);
-            travel(root.left, res, path);
-            path.remove(path.size()-1);
-        }
-        if (root.right!=null){
-            path.add(root.right);
-            travel(root.right, res, path);
-            path.remove(path.size()-1);
-        }
-    }*/
 
     public boolean hasPathSum(TreeNode root, int targetSum) {
         List<List<TreeNode>> res = new ArrayList<>();

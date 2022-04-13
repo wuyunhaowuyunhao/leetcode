@@ -26,12 +26,12 @@ public class 所有路径 {
         if (root.left!=null){
             path.add(root.left);
             travel(root.left, res, path);
-            path.remove(path.size()-1);
+            path.remove(path.size()-1);//回溯
         }
         if (root.right!=null){
             path.add(root.right);
             travel(root.right, res, path);
-            path.remove(path.size()-1);
+            path.remove(path.size()-1);//回溯
         }
     }
 
