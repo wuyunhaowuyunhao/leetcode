@@ -64,7 +64,7 @@ public class 从中序与后序遍历序列构造二叉树106 {
         int[] leftPost = Arrays.copyOfRange(postorder, 0, rootIndex);
 
         int[] rightInorder = Arrays.copyOfRange(inorder, rootIndex + 1, inorder.length);
-        int[] rightPost = Arrays.copyOfRange(inorder, rootIndex, postorder.length-1);
+        int[] rightPost = Arrays.copyOfRange(postorder, rootIndex, postorder.length-1);
 
         root.left = buildTree(leftInorder, leftPost);
         root.right = buildTree(rightInorder, rightPost);
