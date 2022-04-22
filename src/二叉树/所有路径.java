@@ -8,30 +8,31 @@ import java.util.List;
 public class 所有路径 {
     public static List<List<TreeNode>> binaryTreePaths(TreeNode root) {
         List<List<TreeNode>> res = new ArrayList<>();
-        if (root == null){
+        if (root == null) {
             return res;
         }
         List<TreeNode> path = new ArrayList<>();
-        path.add(root);
+//        path.add(root);
         travel(root, res, path);
         return res;
     }
 
-    private static void travel(TreeNode root, List<List<TreeNode>> res, List<TreeNode> path){
-        if (root.left==null&&root.right==null){
+    private static void travel(TreeNode root, List<List<TreeNode>> res, List<TreeNode> path) {
+        path.add(root);
+        if (root.left == null && root.right == null) {
             List<TreeNode> tmp = Arrays.asList(new TreeNode[path.size()]);
             Collections.copy(tmp, path);
             res.add(tmp);
         }
-        if (root.left!=null){
-            path.add(root.left);
+        if (root.left != null) {
+//            path.add(root.left);
             travel(root.left, res, path);
-            path.remove(path.size()-1);//回溯
+            path.remove(path.size() - 1);//回溯
         }
-        if (root.right!=null){
-            path.add(root.right);
+        if (root.right != null) {
+//            path.add(root.right);
             travel(root.right, res, path);
-            path.remove(path.size()-1);//回溯
+            path.remove(path.size() - 1);//回溯
         }
     }
 
