@@ -39,6 +39,7 @@ public class 二叉树的最近公共祖先236 {
     }
 
     public static void main(String[] args) {
+
         TreeNode t4 = new TreeNode(4);
         TreeNode t5 = new TreeNode(5);
         TreeNode t6 = new TreeNode(6);
@@ -46,7 +47,13 @@ public class 二叉树的最近公共祖先236 {
         TreeNode t2 = new TreeNode(2, t4, null);
         TreeNode t3 = new TreeNode(3, t5, t6);
         TreeNode t1 = new TreeNode(1, t2, t3);
-
+        /**
+         *         1
+         *        / \
+         *       2   3
+         *      /   / \
+         *     4   5   6
+         */
 
         List<TreeNode> path1 = new ArrayList<>();
         List<TreeNode> path2 = new ArrayList<>();
@@ -56,4 +63,5 @@ public class 二叉树的最近公共祖先236 {
         findPath(t1, 6, new ArrayList<TreeNode>(), path2);
         System.out.println(path2);
     }
+
 }

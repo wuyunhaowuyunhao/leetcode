@@ -44,6 +44,17 @@ public class 所有路径 {
         TreeNode t2 = new TreeNode(2, t4, null);
         TreeNode t3 = new TreeNode(3, t5, t6);
         TreeNode t1 = new TreeNode(1, t2, t3);
+        /**
+                 *         1
+                 *        / \
+                 *       2   3
+                 *      /   / \
+                 *     4   5   6
+         */
+
+
+        List<TreeNode> path1 = new ArrayList<>();
+        List<TreeNode> path2 = new ArrayList<>();
 
         List<List<TreeNode>> paths = binaryTreePaths(t1);
         System.out.println(paths);
